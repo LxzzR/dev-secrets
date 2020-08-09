@@ -1,0 +1,28 @@
+form {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px 0;
+  textarea {
+    background: transparent;
+    border: 1px solid $success;
+    color: $accent;
+    height: 140px;
+    padding: 10px;
+    width: 100%;
+    &:focus {
+      outline: 2px solid $primary;
+      border: 1px solid $primary;
+      /* outline: 3px solid #ef5350;
+      border: 2px solid #ef5350; */
+    }
+  }
+  button {
+    background: $secondary;
+    color: $black;
+    transition: transform 150ms, background 150ms;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+  }
+}

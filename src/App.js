@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import firebase from "./firebase";
+import Header from "./Header";
+import UserInput from "./UserInput";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    const dbRef = firebase.database().ref();
+
+    dbRef.on("value", (res) => {
+      console.log(res.val());
+    });
+  }
+
+  render() {
+    return (
+      <div class="viewport">
+        <Header />
+        <UserInput />
+      </div>
+    );
+  }
 }
 
 export default App;
