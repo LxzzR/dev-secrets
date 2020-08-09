@@ -9,11 +9,11 @@ const Header = () => {
             <span>&lt;</span>Dev Secrets<span>&frasl;&gt;</span>
           </h1>
         </div>
-        <p class="intro">
+        <p className="intro">
           The best cure for imposter syndrome is talking about it and knowing
-          that you're not alone. Leave a short 150 character message to inspire
-          other devs or unload some stress, then take a peak into the inner
-          world of other devs.
+          you're not alone. Leave a short 150 character message to inspire other
+          devs or unload some stress, then take a peak into the inner world of
+          other coders.
         </p>
       </div>
     </header>
