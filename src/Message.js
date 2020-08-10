@@ -2,9 +2,9 @@ import React from "react";
 
 function Message({ message }) {
   return (
-    <section className="pageWrapper message">
+    <div className="message">
       <p>{message}</p>
-    </section>
+    </div>
   );
 }
 

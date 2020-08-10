@@ -15,27 +15,29 @@ class Form extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.displayMessage(this.state.inputValue);
+
+    this.setState({
+      inputValue: "",
+    });
   };
 
   render() {
     return (
-      <div className="pageWrapper">
-        <form action="/" onSubmit={this.handleSubmit}>
-          <label htmlFor="message">Leave your message here:</label>
-          <textarea
-            type="text"
-            id="message"
-            placeholder="Your message here..."
-            minLength="20"
-            maxLength="150"
-            onChange={this.handleInput}
-            value={this.state.value}
-            required
-          />
+      <form className="messageForm" action="/" onSubmit={this.handleSubmit}>
+        <label htmlFor="message">Leave your message here:</label>
+        <textarea
+          type="text"
+          id="message"
+          placeholder="Your message here..."
+          minLength="5"
+          maxLength="150"
+          onChange={this.handleInput}
+          value={this.state.inputValue}
+          required
+        />
 
-          <button type="submit">Post Message</button>
-        </form>
-      </div>
+        <button type="submit">Post Message</button>
+      </form>
     );
   }
 }

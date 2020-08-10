@@ -1,5 +1,5 @@
 // === FORM STYLES ===
-form {
+.messageForm {
   display: flex;
   flex-flow: row wrap;
   padding: 10px 0;
@@ -21,9 +21,17 @@ form {
     background: $secondary;
     color: $black;
     transition: transform 150ms, background 150ms;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background: lighten($secondary, 5);
       cursor: pointer;
       transform: scale(1.03);
+    }
+    &:focus,
+    &:focus-within {
+      outline: 3px solid $primary;
+      border: 2px solid $black;
     }
   }
 }

@@ -4,7 +4,6 @@
 import React, { Component } from "react";
 import firebase from "./firebase";
 import Header from "./Header";
-import Form from "./Form";
 import Message from "./Message";
 
 // App Class Component ----- +
@@ -34,16 +33,17 @@ class App extends Component {
   };
 
   render() {
-    console.log("rendered, this.state.messages:", this.state.messages);
     return (
       <div className="viewport">
-        <Header />
-
-        <Form displayMessage={this.displayMessage} />
-
-        {this.state.messages.map((message, index) => {
-          return <Message message={message} key={index} />;
-        })}
+        <Header displayMessage={this.displayMessage} />
+        <main>
+          <section className="messages pageWrapper">
+            <h2>Dev Secrets...</h2>
+            {this.state.messages.map((message, index) => {
+              return <Message message={message} key={index} />;
+            })}
+          </section>
+        </main>
       </div>
     );
   }
