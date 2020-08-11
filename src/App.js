@@ -12,6 +12,7 @@ class App extends Component {
     super();
     this.state = {
       messages: [],
+      isVisible: false,
     };
   }
 
@@ -20,10 +21,7 @@ class App extends Component {
 
     dbRef.on("value", (res) => {
       const newMessages = [];
-
       const data = res.val();
-
-      console.log("component did mount is working", data);
 
       for (let key in data) {
         newMessages.push(data[key]);
@@ -35,35 +33,35 @@ class App extends Component {
     });
   }
 
+  // Handles form event listener and updates state + firebase with new message
   displayMessage = (inputValue) => {
     const updatedMessages = [...this.state.messages];
     updatedMessages.push(inputValue);
 
     this.setState({
       messages: updatedMessages,
+      isVisible: true,
     });
-  };
 
-  handleClick = (inputValue) => {
     const dbRef = firebase.database().ref();
-    dbRef.push([inputValue]);
+    dbRef.push(inputValue);
   };
 
   render() {
     return (
       <div className="viewport">
-        <Header
-          displayMessage={this.displayMessage}
-          handleClick={this.handleClick}
-        />
-        <main>
-          <section className="messages pageWrapper">
-            <h2>Dev Secrets...</h2>
-            {this.state.messages.map((message, index) => {
-              return <Message message={message} key={index} />;
-            })}
-          </section>
-        </main>
+        <Header displayMessage={this.displayMessage} />
+        {this.state.isVisible && (
+          <main>
+            <section className="messages pageWrapper">
+              <h2>Dev Secrets...</h2>
+              {/* Maps through messages array and appends new messages to page */}
+              {this.state.messages.map((message, index) => {
+                return <Message message={message} key={index} />;
+              })}
+            </section>
+          </main>
+        )}
       </div>
     );
   }
