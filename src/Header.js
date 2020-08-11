@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form";
 
-const Header = ({ displayMessage }) => {
+const Header = ({ displayMessage, handleClick }) => {
   return (
     <header>
       <div className="pageWrapper">
@@ -17,7 +17,7 @@ const Header = ({ displayMessage }) => {
           other coders.
         </p>
 
-        <Form displayMessage={displayMessage} />
+        <Form displayMessage={displayMessage} handleClick={handleClick} />
       </div>
     </header>
   );

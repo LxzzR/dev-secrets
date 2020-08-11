@@ -19,7 +19,19 @@ class App extends Component {
     const dbRef = firebase.database().ref();
 
     dbRef.on("value", (res) => {
-      console.log(res.val());
+      const newMessages = [];
+
+      const data = res.val();
+
+      console.log("component did mount is working", data);
+
+      for (let key in data) {
+        newMessages.push(data[key]);
+      }
+
+      this.setState({
+        messages: newMessages,
+      });
     });
   }
 
@@ -32,10 +44,18 @@ class App extends Component {
     });
   };
 
+  handleClick = (inputValue) => {
+    const dbRef = firebase.database().ref();
+    dbRef.push([inputValue]);
+  };
+
   render() {
     return (
       <div className="viewport">
-        <Header displayMessage={this.displayMessage} />
+        <Header
+          displayMessage={this.displayMessage}
+          handleClick={this.handleClick}
+        />
         <main>
           <section className="messages pageWrapper">
             <h2>Dev Secrets...</h2>

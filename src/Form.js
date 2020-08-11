@@ -36,7 +36,12 @@ class Form extends Component {
           required
         />
 
-        <button type="submit">Post Message</button>
+        <button
+          type="submit"
+          onClick={() => this.props.handleClick(this.state.inputValue)}
+        >
+          Post Message
+        </button>
       </form>
     );
   }
