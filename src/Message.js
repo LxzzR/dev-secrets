@@ -1,9 +1,9 @@
 import React from "react";
 
-function Message({ message }) {
+function Message({ message, className, font }) {
   return (
-    <div className="message">
-      <p>{message}</p>
+    <div className={`message ${className}`}>
+      <p className={font}>{message}</p>
     </div>
   );
 }

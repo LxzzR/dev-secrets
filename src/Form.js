@@ -35,8 +35,10 @@ class Form extends Component {
           value={this.state.inputValue}
           required
         />
-
-        <button type="submit">Post Message</button>
+        <div className="btnWrapper">
+          <button type="button">Need a prompt?</button>
+          <button type="submit">Post Message</button>
+        </div>
       </form>
     );
   }
