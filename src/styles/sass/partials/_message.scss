@@ -6,17 +6,43 @@
   justify-content: space-between;
 }
 
+.messageHeading {
+  background: $black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  .btnWrapper {
+    align-items: center;
+    display: flex;
+  }
+  button {
+    background: transparent;
+    // border: 1px solid $white;
+    border-radius: 5px;
+    // border-radius: 10px;
+    color: $primary;
+    padding: 5px 10px;
+    font-size: 2rem;
+    font-weight: 400;
+    &:hover {
+      border: 2px solid $white;
+      cursor: pointer;
+      transform: scale(1.02);
+    }
+  }
+}
+
 .message {
-  // background: lighten($white, 10);
-  // box-shadow: inset 0 0 100px lighten($white, 5);
-  border: 3px solid $white;
+  border: 2px solid $white;
   border-radius: 7px;
   color: lighten($white, 5);
-  margin: 20px 0;
+  margin: 15px 0;
   overflow-wrap: break-word;
-  padding: 30px;
-  float: left;
-  width: 31%;
+  padding: 25px;
+  max-width: 100%;
   &.white {
     border-color: $white;
   }
@@ -31,12 +57,5 @@
   }
   &.yellow {
     border-color: $secondary;
-  }
-  &.red {
-    border-color: $error;
-  }
-  &.whiteBkg {
-    background: $white;
-    color: $black;
   }
 }

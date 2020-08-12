@@ -51,8 +51,9 @@ class App extends Component {
     });
   }
 
-  // Handles form onSubmit event listener and updates state + firebase with new message
-  // Takes text area input value as an argument
+  // === COMPONENT METHODS ===
+
+  // Handles form onSubmit event listener and updates state + firebase with new message and akes text area input value as an argument
   displayMessage = (inputValue) => {
     // Creates a copy of the array currently stored in state
     const updatedMessages = [...this.state.messages];
@@ -80,15 +81,17 @@ class App extends Component {
     dbRef.push(inputValue);
   };
 
-  displayPrompts = () => {
+  // Handles visibility of the prompts component
+  displayPrompts = (boolean) => {
     this.setState({
-      promptsVisible: true,
+      promptsVisible: boolean,
     });
   };
 
-  hidePrompts = () => {
+  resetPage = () => {
     this.setState({
-      promptsVisible: false,
+      headerVisible: true,
+      msgVisible: false,
     });
   };
 
@@ -107,7 +110,13 @@ class App extends Component {
         {this.state.msgVisible && (
           <main>
             <section className="messages pageWrapper">
-              <h2>Dev Secrets...</h2>
+              <div className="messageHeading">
+                <h2>Dev Secrets...</h2>
+                <div className="btnWrapper">
+                  <button onClick={this.resetPage}>Post Again</button>
+                </div>
+              </div>
+
               {/* Maps through messages array and appends all message components to page */}
               {this.state.messages.map(({ message, color, font }, index) => {
                 console.log(message);
@@ -124,10 +133,11 @@ class App extends Component {
             </section>
           </main>
         )}
-        {/* Show prompts component only if promptsVisible state is true */}
+
+        {/* Shows prompts component only if promptsVisible state is true */}
         {this.state.promptsVisible && (
           //Prompts Component
-          <Prompts hidePrompts={this.hidePrompts} />
+          <Prompts hidePrompts={this.displayPrompts} />
         )}
       </div>
     );

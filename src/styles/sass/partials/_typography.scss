@@ -4,7 +4,6 @@ html {
 }
 
 body,
-p,
 button,
 label,
 textarea {
@@ -26,10 +25,14 @@ textarea {
 h1 {
   font-size: 8rem;
   font-weight: 400;
-  padding: 25px 0;
+  padding: 15px 0;
   span {
     color: $secondary;
   }
+}
+
+p {
+  padding: 7px 0;
 }
 
 button {
@@ -47,18 +50,19 @@ textarea::placeholder {
 
 .intro {
   color: $white;
+  font-size: 2rem;
+}
+
+.prompts h2 {
+  font-weight: 400;
+  padding: 15px 0;
 }
 
 .messages {
   h2 {
-    background: $black;
     font-family: "Reenie Beanie", cursive;
-    font-size: 10rem;
+    font-size: 6rem;
     font-weight: 400;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
   }
   p {
     letter-spacing: 0.4rem;

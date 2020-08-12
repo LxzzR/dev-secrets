@@ -2,23 +2,32 @@ import React from "react";
 
 const Prompts = ({ hidePrompts }) => {
   return (
-    <section className="prompts" tabIndex="0" onClick={hidePrompts}>
+    <section
+      className="prompts"
+      tabIndex="0"
+      onClick={() => hidePrompts(false)}
+    >
       <div className="promptsModal">
         <h2>Message Prompts</h2>
         <ul>
-          <li>Share a time you were scared</li>
-          <li>
-            What's something you didn't think you'd be able to do but actually
-            accomlished?
-          </li>
-          <li>Share something related to coding that's been on your mind</li>
-          <li>What small coding achievment are you most proud of?</li>
+          <li>What are your dev + career related fears?</li>
+          <li>What advice can you share for other developers?</li>
+          <li>What would work be like if you had more confidence?</li>
+          <li>What achievment are you most proud of?</li>
         </ul>
-        <button type="button" className="backButton" onClick={hidePrompts}>
+        <button
+          type="button"
+          className="backButton"
+          onClick={() => hidePrompts(false)}
+        >
           Back
         </button>
-        <button className="faBack" ariaLabel="go back" onClick={hidePrompts}>
-          <i class="far fa-times-circle"></i>
+        <button
+          className="faBack"
+          aria-label="go back"
+          onClick={() => hidePrompts(false)}
+        >
+          <i className="far fa-times-circle"></i>
         </button>
       </div>
     </section>

@@ -39,6 +39,10 @@
       margin: 15px 0;
     }
   }
+
+  .message {
+    max-width: 48%;
+  }
 }
 
 // Medium Screens ----- +
@@ -49,6 +53,12 @@
 
   h1 {
     font-size: 13rem;
+  }
+
+  .messageHeading {
+    h2 {
+      font-size: 10rem;
+    }
   }
 }
 
@@ -62,6 +72,11 @@
     font-size: 15rem;
     line-height: 0.8;
     padding-bottom: 50px;
+  }
+
+  header,
+  main {
+    height: 100vh;
   }
 
   header {
@@ -94,7 +109,15 @@
       }
     }
   }
-  main {
-    height: 100vh;
+
+  .messageHeading {
+    button {
+      border: 2px solid $white;
+      border-radius: 5px;
+      padding: 10px 20px;
+      &:hover {
+        border: 3px solid $white;
+      }
+    }
   }
 }

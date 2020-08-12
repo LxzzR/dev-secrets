@@ -14,8 +14,8 @@
     border-radius: 20px;
     color: $white;
     max-width: 700px;
-    padding: 50px;
-    position: relative;
+    padding: 30px;
+    position: absolute;
     width: 80%;
     h2 {
       color: $primary;
@@ -34,13 +34,14 @@
       padding: 10px 20px;
       background: $primary;
     }
+
     .faBack {
       background: transparent;
       border: none;
       color: $white;
       position: absolute;
-      top: 10px;
-      right: 20px;
+      top: 5px;
+      right: 10px;
     }
     li {
       margin: 10px 0;
