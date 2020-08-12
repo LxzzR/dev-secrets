@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form";
 
-const Header = ({ displayMessage }) => {
+const Header = ({ displayMessage, displayPrompts }) => {
   return (
     <header>
       <div className="pageWrapper">
@@ -18,7 +18,7 @@ const Header = ({ displayMessage }) => {
           other coders who are just like you.
         </p>
 
-        <Form displayMessage={displayMessage} />
+        <Form displayMessage={displayMessage} displayPrompts={displayPrompts} />
       </div>
     </header>
   );

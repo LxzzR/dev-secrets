@@ -36,8 +36,12 @@ class Form extends Component {
           required
         />
         <div className="btnWrapper">
-          <button type="button">Need a prompt?</button>
-          <button type="submit">Post Message</button>
+          <button type="button" onClick={this.props.displayPrompts}>
+            Need a prompt?
+          </button>
+          <button type="submit" className="postMsg">
+            Post Message
+          </button>
         </div>
       </form>
     );

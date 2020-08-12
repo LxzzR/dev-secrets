@@ -18,21 +18,33 @@
     }
   }
 
-  button {
-    background: $secondary;
-    color: $black;
-    transition: transform 150ms, background 150ms;
-    &:hover,
-    &:focus,
-    &:focus-within {
-      background: lighten($secondary, 5);
-      cursor: pointer;
-      transform: scale(1.03);
-    }
-    &:focus,
-    &:focus-within {
-      outline: 3px solid $primary;
-      border: 2px solid $black;
+  .btnWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    button {
+      background: $secondary;
+      color: $black;
+      transition: transform 150ms, background 150ms;
+      width: 48%;
+      &:hover,
+      &:focus,
+      &:focus-within {
+        background: lighten($secondary, 5);
+        cursor: pointer;
+        transform: scale(1.02);
+      }
+      &:focus,
+      &:focus-within {
+        outline: 3px solid $primary;
+        border: 2px solid $black;
+      }
+      &.postMsg {
+        background: $success;
+        &:hover {
+          background: lighten($success, 5);
+        }
+      }
     }
   }
 }

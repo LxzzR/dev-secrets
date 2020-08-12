@@ -1,3 +1,4 @@
+// === TYPOGRAPHY ===
 html {
   font-size: 32%;
 }
@@ -10,11 +11,11 @@ textarea {
   font-size: 2.7rem;
 }
 
-p,
+body,
 button,
 textarea,
 textarea::placeholder {
-  font-family: $fontStack;
+  font-family: $mainStack;
 }
 
 p,
@@ -46,4 +47,42 @@ textarea::placeholder {
 
 .intro {
   color: $white;
+}
+
+.messages {
+  h2 {
+    background: $black;
+    font-family: "Reenie Beanie", cursive;
+    font-size: 10rem;
+    font-weight: 400;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  p {
+    letter-spacing: 0.4rem;
+    &.annie {
+      font-family: $annieStack;
+    }
+    &.gaegu {
+      font-size: 5rem;
+      font-family: $sacramentoStack;
+    }
+    &.reenie {
+      font-family: $reenieStack;
+      font-size: 4rem;
+    }
+    &.sueEllen {
+      font-family: $sueEllenStack;
+    }
+    &.swanky {
+      font-family: $swankyStack;
+      text-transform: uppercase;
+    }
+    &.arial {
+      font-family: $arielStack;
+      font-size: 1.6rem;
+    }
+  }
 }

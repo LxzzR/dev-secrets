@@ -2,6 +2,7 @@
 
 // Colours ----- +
 $black: rgb(21, 21, 26);
+$blackTransparent: rgba(21, 21, 26, 0.8);
 $white: rgb(188, 170, 164);
 
 $primary: rgb(128, 203, 196);
@@ -12,4 +13,12 @@ $success: rgb(102, 187, 106);
 $error: rgb(239, 83, 80);
 
 // Fonts ----- +
-$fontStack: "Anonymous Pro", courier, monospace;
+$mainStack: "Anonymous Pro", courier, monospace;
+
+// !! careful - use caution and re-name when changing the following variable names. They are specifically named due to sheer number
+$annieStack: "Annie Use Your Telescope", cursive;
+$sacramentoStack: "Sacramento", cursive;
+$reenieStack: "Reenie Beanie", cursive;
+$sueEllenStack: "Sue Ellen Francisco", cursive;
+$swankyStack: "Swanky and Moo Moo", cursive;
+$arielStack: Arial, Helvetica, sans-serif;
