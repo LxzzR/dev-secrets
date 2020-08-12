@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "386ae8691c85101d51d4412cc664ce13",
+    "revision": "e644ecf172874335b451aa69f229079c",
     "url": "/lizzRennieProject5/index.html"
   },
   {
-    "revision": "0fe68c578c281b8f8e10",
-    "url": "/lizzRennieProject5/static/css/main.586913a7.chunk.css"
+    "revision": "04353dae63e85f58ef9f",
+    "url": "/lizzRennieProject5/static/css/main.85b207ed.chunk.css"
   },
   {
     "revision": "ba01a18a85b4eaf18018",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lizzRennieProject5/static/js/2.194aad34.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0fe68c578c281b8f8e10",
-    "url": "/lizzRennieProject5/static/js/main.50e8df32.chunk.js"
+    "revision": "04353dae63e85f58ef9f",
+    "url": "/lizzRennieProject5/static/js/main.927e7482.chunk.js"
   },
   {
     "revision": "e581968a622437ddf3d4",
