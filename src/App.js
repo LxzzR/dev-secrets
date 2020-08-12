@@ -24,7 +24,7 @@ class App extends Component {
     super();
     this.state = {
       messages: [{}],
-      // headerVisible: true,
+      headerVisible: true,
       msgVisible: false,
       promptsVisible: false,
     };
@@ -71,6 +71,7 @@ class App extends Component {
     // Sets message visible to true
     this.setState({
       messages: updatedMessages,
+      headerVisible: false,
       msgVisible: true,
     });
 
@@ -81,14 +82,12 @@ class App extends Component {
 
   displayPrompts = () => {
     this.setState({
-      // headerVisible: false,
       promptsVisible: true,
     });
   };
 
   hidePrompts = () => {
     this.setState({
-      // headerVisible: true,
       promptsVisible: false,
     });
   };
@@ -97,12 +96,12 @@ class App extends Component {
     return (
       <div className="viewport">
         {/* Header Component*/}
-        {/* {this.state.headerVisible && ( */}
+        {this.state.headerVisible && (
           <Header
             displayMessage={this.displayMessage}
             displayPrompts={this.displayPrompts}
           />
-        {/* )} */}
+        )}
 
         {/* Shows this section only if msgVisible state is set to true */}
         {this.state.msgVisible && (

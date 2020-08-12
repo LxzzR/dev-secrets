@@ -66,8 +66,10 @@ textarea::placeholder {
       font-family: $annieStack;
     }
     &.gaegu {
-      font-size: 5rem;
       font-family: $sacramentoStack;
+      font-size: 3rem;
+      letter-spacing: 0.4rem;
+      text-transform: lowercase;
     }
     &.reenie {
       font-family: $reenieStack;

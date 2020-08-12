@@ -13,8 +13,6 @@
     &:focus {
       outline: 2px solid $primary;
       border: 1px solid $primary;
-      /* outline: 3px solid #ef5350;
-      border: 2px solid #ef5350; */
     }
   }
 
@@ -30,20 +28,16 @@
       &:hover,
       &:focus,
       &:focus-within {
-        background: lighten($secondary, 5);
         cursor: pointer;
         transform: scale(1.02);
       }
       &:focus,
       &:focus-within {
-        outline: 3px solid $primary;
-        border: 2px solid $black;
+        outline: 2px solid $secondary;
+        outline-offset: 2px;
       }
       &.postMsg {
-        background: $success;
-        &:hover {
-          background: lighten($success, 5);
-        }
+        background: $primary;
       }
     }
   }

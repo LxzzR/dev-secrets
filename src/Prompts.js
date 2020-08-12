@@ -2,7 +2,7 @@ import React from "react";
 
 const Prompts = ({ hidePrompts }) => {
   return (
-    <section className="prompts">
+    <section className="prompts" tabIndex="0" onClick={hidePrompts}>
       <div className="promptsModal">
         <h2>Message Prompts</h2>
         <ul>
@@ -14,9 +14,11 @@ const Prompts = ({ hidePrompts }) => {
           <li>Share something related to coding that's been on your mind</li>
           <li>What small coding achievment are you most proud of?</li>
         </ul>
-
-        <button type="button" onClick={hidePrompts}>
+        <button type="button" className="backButton" onClick={hidePrompts}>
           Back
+        </button>
+        <button className="faBack" ariaLabel="go back" onClick={hidePrompts}>
+          <i class="far fa-times-circle"></i>
         </button>
       </div>
     </section>
