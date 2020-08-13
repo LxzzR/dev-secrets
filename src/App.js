@@ -3,7 +3,7 @@
 // Imports ----- +
 import React, { Component } from "react";
 import firebase from "./firebase";
-import Header from "./Header";
+import Landing from "./Landing";
 import Prompts from "./Prompts";
 import Message from "./Message";
 
@@ -36,7 +36,7 @@ class App extends Component {
     super();
     this.state = {
       messages: [{}],
-      isHeaderVisible: true,
+      isLandingVisible: true,
       isMsgVisible: false,
       isPromptsVisible: false,
     };
@@ -96,10 +96,10 @@ class App extends Component {
     });
   };
 
-  // Handles visibility of header and message sections
+  // Handles visibility of landing and message sections
   handleShowMsgs = (boolean) => {
     this.setState({
-      isHeaderVisible: !boolean,
+      isLandingVisible: !boolean,
       isMsgVisible: boolean,
     });
   };
@@ -108,9 +108,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* Display Header Conditionally */}
-        {this.state.isHeaderVisible && (
-          <Header
+        {/* Display Landing Conditionally */}
+        {this.state.isLandingVisible && (
+          <Landing
             displayMessage={this.displayMessage}
             handleShowPrompts={() => this.handleShowPrompts(true)}
             handleShowMsgs={this.handleShowMsgs}

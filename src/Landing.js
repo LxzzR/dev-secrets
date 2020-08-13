@@ -1,7 +1,11 @@
+// === LANDING ===
+
+// Imports ----- +
 import React from "react";
 import Form from "./Form";
 
-const Header = ({ displayMessage, handleShowPrompts, handleShowMsgs }) => {
+// Landing Component ----- +
+const Landing = ({ displayMessage, handleShowPrompts, handleShowMsgs }) => {
   return (
     <header>
       <div className="pageWrapper">
@@ -33,4 +37,4 @@ const Header = ({ displayMessage, handleShowPrompts, handleShowMsgs }) => {
   );
 };
 
-export default Header;
+export default Landing;
