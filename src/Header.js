@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form";
 
-const Header = ({ displayMessage, displayPrompts }) => {
+const Header = ({ displayMessage, displayPrompts, handleShowMsgs }) => {
   return (
     <header>
       <div className="pageWrapper">
@@ -26,6 +26,7 @@ const Header = ({ displayMessage, displayPrompts }) => {
         <Form
           displayMessage={displayMessage}
           displayPrompts={() => displayPrompts(true)}
+          handleShowMsgs={handleShowMsgs}
         />
       </div>
     </header>

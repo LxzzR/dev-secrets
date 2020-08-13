@@ -1,6 +1,8 @@
+// === FORM ===
 import React, { Component } from "react";
 
 class Form extends Component {
+  // Initialize State ----- +
   constructor() {
     super();
     this.state = {
@@ -8,6 +10,7 @@ class Form extends Component {
     };
   }
 
+  // Component methods ----- +
   handleInput = (e) => {
     this.setState({ inputValue: e.target.value });
   };
@@ -21,6 +24,7 @@ class Form extends Component {
     });
   };
 
+  // Render JSX ----- +
   render() {
     return (
       <form className="messageForm" action="/" onSubmit={this.handleSubmit}>
@@ -40,6 +44,13 @@ class Form extends Component {
           </button>
           <button type="submit" className="postMsg">
             Post Message
+          </button>
+          <button
+            type="button"
+            className="showSecrets"
+            onClick={this.props.handleShowMsgs}
+          >
+            Just take me to the secrets..
           </button>
         </div>
       </form>

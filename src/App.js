@@ -1,4 +1,4 @@
-// === APP ==
+// === APP ===
 
 // Imports ----- +
 import React, { Component } from "react";
@@ -7,7 +7,7 @@ import Header from "./Header";
 import Prompts from "./Prompts";
 import Message from "./Message";
 
-// Module variables
+// Module variables + Functions ----- +
 const msgColors = ["white", "yellow", "green", "blue", "purple"];
 
 const msgFonts = [
@@ -31,13 +31,14 @@ const getRandomClassName = (array) => {
 
 // App Class Component ----- +
 class App extends Component {
+  // Initialize State ----- +
   constructor() {
     super();
     this.state = {
       messages: [{}],
-      headerVisible: true,
-      msgVisible: false,
-      promptsVisible: false,
+      isHeaderVisible: true,
+      isMsgVisible: false,
+      isPromptsVisible: false,
     };
   }
 
@@ -62,13 +63,9 @@ class App extends Component {
     });
   }
 
-  // === COMPONENT METHODS ===
-
   // Handles form onSubmit event listener and updates state + firebase with new message and akes text area input value as an argument
   displayMessage = (inputValue) => {
-    // Creates a copy of the array currently stored in state
     const updatedMessages = [...this.state.messages];
-    // Assigns a random font and border colour and stores it in variable
     const msgColor = getRandomClassName(msgColors);
     const msgFont = getRandomClassName(msgFonts);
 
@@ -83,8 +80,8 @@ class App extends Component {
     // Sets message visible to true
     this.setState({
       messages: updatedMessages,
-      headerVisible: false,
-      msgVisible: true,
+      isHeaderVisible: false,
+      isMsgVisible: true,
     });
 
     // pushes our new message to firebase
@@ -95,30 +92,39 @@ class App extends Component {
   // Handles visibility of the prompts component
   displayPrompts = (boolean) => {
     this.setState({
-      promptsVisible: boolean,
+      isPromptsVisible: boolean,
     });
   };
 
   resetPage = () => {
     this.setState({
-      headerVisible: true,
-      msgVisible: false,
+      isHeaderVisible: true,
+      isMsgVisible: false,
     });
   };
 
+  handleShowMsgs = () => {
+    this.setState({
+      isHeaderVisible: false,
+      isMsgVisible: true,
+    });
+  };
+
+  // Render JSX ----- +
   render() {
     return (
-      <div className="viewport">
-        {/* Header Component*/}
-        {this.state.headerVisible && (
+      <div>
+        {/* Display Header Conditionally */}
+        {this.state.isHeaderVisible && (
           <Header
             displayMessage={this.displayMessage}
             displayPrompts={this.displayPrompts}
+            handleShowMsgs={this.handleShowMsgs}
           />
         )}
 
-        {/* Shows this section only if msgVisible state is set to true */}
-        {this.state.msgVisible && (
+        {/* Display messages conditionally */}
+        {this.state.isMsgVisible && (
           <main>
             <section className="messages pageWrapper">
               <div className="messageHeading">
@@ -128,11 +134,10 @@ class App extends Component {
                 </div>
               </div>
 
-              {/* Maps through messages array and appends all message components to page */}
+              {/* Map messages and append each to page */}
               {this.state.messages.map(({ message, color, font }, index) => {
                 console.log(message);
                 return (
-                  // Message Component
                   <Message
                     message={message}
                     key={index}
@@ -145,9 +150,8 @@ class App extends Component {
           </main>
         )}
 
-        {/* Shows prompts component only if promptsVisible state is true */}
-        {this.state.promptsVisible && (
-          //Prompts Component
+        {/* Display prompts modal conditionally */}
+        {this.state.isPromptsVisible && (
           <Prompts hidePrompts={this.displayPrompts} />
         )}
       </div>

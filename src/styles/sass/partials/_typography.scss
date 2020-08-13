@@ -17,11 +17,6 @@ textarea::placeholder {
   font-family: $mainStack;
 }
 
-p,
-textarea {
-  line-height: 1.4;
-}
-
 h1 {
   font-size: 8rem;
   font-weight: 400;
@@ -33,6 +28,16 @@ h1 {
 
 p {
   padding: 7px 0;
+}
+
+p,
+textarea {
+  line-height: 1.4;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
 }
 
 button {
@@ -50,12 +55,12 @@ textarea::placeholder {
 
 .intro p {
   color: $white;
-  font-size: 2rem;
 }
 
-.prompts h2 {
+.btnWrapper .showSecrets {
+  font-size: 1.8rem;
   font-weight: 400;
-  padding: 15px 0;
+  text-align: left;
 }
 
 .messages {
@@ -97,4 +102,9 @@ textarea::placeholder {
       font-family: $neucha;
     }
   }
+}
+
+.prompts h2 {
+  font-weight: 400;
+  padding: 15px 0;
 }

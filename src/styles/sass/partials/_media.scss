@@ -83,9 +83,9 @@
   }
 
   h1 {
-    font-size: 15rem;
+    font-size: 13rem;
     line-height: 0.8;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 
   header,
@@ -100,26 +100,34 @@
     justify-content: center;
   }
 
+  .intro p {
+    padding: 15px 0;
+  }
+
   // Form
   .messageForm {
+    margin: 30px 0;
     padding: 25px 0;
     position: relative;
     width: 100%;
+    label {
+      padding-top: 0;
+    }
     textarea {
       margin: 0 auto;
       padding: 20px;
-      width: 60%;
+      width: 55%;
     }
     .btnWrapper {
       display: flex;
       flex-wrap: wrap;
       left: 0;
-      bottom: 15%;
+      bottom: 7px;
       position: absolute;
-      width: auto;
+      width: 50%;
       button {
         margin: 5px 0;
-        width: 75%;
+        width: 60%;
       }
     }
   }
