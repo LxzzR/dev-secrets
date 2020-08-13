@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/lizzRennieProject5/static/css/main.200deff5.chunk.css",
-    "main.js": "/lizzRennieProject5/static/js/main.12087c02.chunk.js",
-    "main.js.map": "/lizzRennieProject5/static/js/main.12087c02.chunk.js.map",
+    "main.css": "/lizzRennieProject5/static/css/main.e960d02c.chunk.css",
+    "main.js": "/lizzRennieProject5/static/js/main.03887190.chunk.js",
+    "main.js.map": "/lizzRennieProject5/static/js/main.03887190.chunk.js.map",
     "runtime-main.js": "/lizzRennieProject5/static/js/runtime-main.aef5b25c.js",
     "runtime-main.js.map": "/lizzRennieProject5/static/js/runtime-main.aef5b25c.js.map",
     "static/js/2.194aad34.chunk.js": "/lizzRennieProject5/static/js/2.194aad34.chunk.js",
     "static/js/2.194aad34.chunk.js.map": "/lizzRennieProject5/static/js/2.194aad34.chunk.js.map",
     "index.html": "/lizzRennieProject5/index.html",
-    "precache-manifest.36be694867e841a121e1cdbd4d8cd9b4.js": "/lizzRennieProject5/precache-manifest.36be694867e841a121e1cdbd4d8cd9b4.js",
+    "precache-manifest.fa1a4bdd442d562fa90dece9e318a128.js": "/lizzRennieProject5/precache-manifest.fa1a4bdd442d562fa90dece9e318a128.js",
     "service-worker.js": "/lizzRennieProject5/service-worker.js",
-    "static/css/main.200deff5.chunk.css.map": "/lizzRennieProject5/static/css/main.200deff5.chunk.css.map",
+    "static/css/main.e960d02c.chunk.css.map": "/lizzRennieProject5/static/css/main.e960d02c.chunk.css.map",
     "static/js/2.194aad34.chunk.js.LICENSE.txt": "/lizzRennieProject5/static/js/2.194aad34.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.aef5b25c.js",
     "static/js/2.194aad34.chunk.js",
-    "static/css/main.200deff5.chunk.css",
-    "static/js/main.12087c02.chunk.js"
+    "static/css/main.e960d02c.chunk.css",
+    "static/js/main.03887190.chunk.js"
   ]
 }
