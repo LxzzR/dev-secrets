@@ -131,16 +131,18 @@ class App extends Component {
               </div>
 
               {/* Map messages and append each to page */}
-              {this.state.messages.map(({ message, color, font }, index) => {
-                return (
-                  <Message
-                    message={message}
-                    key={index}
-                    className={color}
-                    font={font}
-                  />
-                );
-              })}
+              {this.state.messages
+                .reverse()
+                .map(({ message, color, font }, index) => {
+                  return (
+                    <Message
+                      message={message}
+                      key={index}
+                      className={color}
+                      font={font}
+                    />
+                  );
+                })}
             </section>
           </main>
         )}
