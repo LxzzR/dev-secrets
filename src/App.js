@@ -84,18 +84,19 @@ class App extends Component {
       isMsgVisible: true,
     });
 
-    // pushes our new message to firebase
+    // pushes new message to firebase
     const dbRef = firebase.database().ref();
     dbRef.push(inputValue);
   };
 
   // Handles visibility of the prompts component
-  displayPrompts = (boolean) => {
+  handleShowPrompts = (boolean) => {
     this.setState({
       isPromptsVisible: boolean,
     });
   };
 
+  // Handles visibility of header and message sections
   handleShowMsgs = (boolean) => {
     this.setState({
       isHeaderVisible: !boolean,
@@ -111,7 +112,7 @@ class App extends Component {
         {this.state.isHeaderVisible && (
           <Header
             displayMessage={this.displayMessage}
-            displayPrompts={this.displayPrompts}
+            handleShowPrompts={this.handleShowPrompts}
             handleShowMsgs={this.handleShowMsgs}
           />
         )}
@@ -131,7 +132,6 @@ class App extends Component {
 
               {/* Map messages and append each to page */}
               {this.state.messages.map(({ message, color, font }, index) => {
-                console.log(message);
                 return (
                   <Message
                     message={message}
@@ -147,7 +147,7 @@ class App extends Component {
 
         {/* Display prompts modal conditionally */}
         {this.state.isPromptsVisible && (
-          <Prompts hidePrompts={this.displayPrompts} />
+          <Prompts handleShowPrompts={this.handleShowPrompts} />
         )}
       </div>
     );
