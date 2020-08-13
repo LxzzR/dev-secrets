@@ -39,7 +39,7 @@ class Form extends Component {
           required
         />
         <div className="btnWrapper">
-          <button type="button" onClick={this.props.displayPrompts}>
+          <button type="button" onClick={this.props.handleShowPrompts}>
             Need a prompt?
           </button>
           <button type="submit" className="postMsg">

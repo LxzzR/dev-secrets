@@ -1,11 +1,11 @@
 import React from "react";
 
-const Prompts = ({ hidePrompts }) => {
+const Prompts = ({ handleShowPrompts }) => {
   return (
     <section
       className="prompts"
       tabIndex="0"
-      onClick={() => hidePrompts(false)}
+      onClick={() => handleShowPrompts(false)}
     >
       <div className="promptsModal">
         <h2>Message Prompts</h2>
@@ -18,14 +18,14 @@ const Prompts = ({ hidePrompts }) => {
         <button
           type="button"
           className="backButton"
-          onClick={() => hidePrompts(false)}
+          onClick={() => handleShowPrompts(false)}
         >
           Back
         </button>
         <button
           className="faBack"
           aria-label="go back"
-          onClick={() => hidePrompts(false)}
+          onClick={() => handleShowPrompts(false)}
         >
           <i className="far fa-times-circle"></i>
         </button>

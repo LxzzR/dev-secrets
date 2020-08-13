@@ -112,7 +112,7 @@ class App extends Component {
         {this.state.isHeaderVisible && (
           <Header
             displayMessage={this.displayMessage}
-            handleShowPrompts={this.handleShowPrompts}
+            handleShowPrompts={() => this.handleShowPrompts(true)}
             handleShowMsgs={this.handleShowMsgs}
           />
         )}
@@ -149,7 +149,7 @@ class App extends Component {
 
         {/* Display prompts modal conditionally */}
         {this.state.isPromptsVisible && (
-          <Prompts handleShowPrompts={this.handleShowPrompts} />
+          <Prompts handleShowPrompts={() => this.handleShowPrompts(false)} />
         )}
       </div>
     );
