@@ -96,17 +96,10 @@ class App extends Component {
     });
   };
 
-  resetPage = () => {
+  handleShowMsgs = (boolean) => {
     this.setState({
-      isHeaderVisible: true,
-      isMsgVisible: false,
-    });
-  };
-
-  handleShowMsgs = () => {
-    this.setState({
-      isHeaderVisible: false,
-      isMsgVisible: true,
+      isHeaderVisible: !boolean,
+      isMsgVisible: boolean,
     });
   };
 
@@ -130,7 +123,9 @@ class App extends Component {
               <div className="messageHeading">
                 <h2>Dev Secrets...</h2>
                 <div className="btnWrapper">
-                  <button onClick={this.resetPage}>Post Again</button>
+                  <button onClick={() => this.handleShowMsgs(false)}>
+                    Post Again
+                  </button>
                 </div>
               </div>
 
