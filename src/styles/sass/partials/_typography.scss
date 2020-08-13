@@ -48,7 +48,7 @@ textarea::placeholder {
   font-size: 2.5rem;
 }
 
-.intro {
+.intro p {
   color: $white;
   font-size: 2rem;
 }
@@ -69,11 +69,8 @@ textarea::placeholder {
     &.annie {
       font-family: $annieStack;
     }
-    &.gaegu {
-      font-family: $sacramentoStack;
-      font-size: 3rem;
-      letter-spacing: 0.4rem;
-      text-transform: lowercase;
+    &.amatic {
+      font-family: $amatic;
     }
     &.reenie {
       font-family: $reenieStack;
@@ -89,6 +86,15 @@ textarea::placeholder {
     &.arial {
       font-family: $arielStack;
       font-size: 1.6rem;
+    }
+    &.architects {
+      font-family: $architects;
+    }
+    &.nanum {
+      font-family: $nanum;
+    }
+    &.neucha {
+      font-family: $neucha;
     }
   }
 }

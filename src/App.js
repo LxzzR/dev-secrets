@@ -10,7 +10,18 @@ import Message from "./Message";
 // Module variables
 const msgColors = ["white", "yellow", "green", "blue", "purple"];
 
-const msgFonts = ["annie", "reenie", "gaegu", "sueEllen", "swanky", "arial"];
+const msgFonts = [
+  "annie",
+  "reenie",
+  "amatic",
+  "sueEllen",
+  "swanky",
+  "arial",
+  "nanum",
+  "neucha",
+  "architects",
+  "amatic",
+];
 
 // Takes an array and returns a random index value of that array
 const getRandomClassName = (array) => {

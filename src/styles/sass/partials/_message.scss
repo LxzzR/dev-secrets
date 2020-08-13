@@ -27,10 +27,15 @@
     padding: 5px 10px;
     font-size: 2rem;
     font-weight: 400;
-    &:hover {
+    &:hover,
+    &:focus {
       border: 2px solid $white;
       cursor: pointer;
       transform: scale(1.02);
+    }
+    &:focus-within {
+      outline: 2px solid $secondary;
+      outline-offset: 2px;
     }
   }
 }
