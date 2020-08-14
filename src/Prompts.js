@@ -2,11 +2,7 @@ import React from "react";
 
 const Prompts = ({ handleShowPrompts }) => {
   return (
-    <section
-      className="prompts"
-      tabIndex="0"
-      onClick={() => handleShowPrompts(false)}
-    >
+    <section className="prompts" tabIndex="0" onClick={handleShowPrompts}>
       <div className="promptsModal">
         <h2>Message Prompts</h2>
         <ul>
@@ -18,16 +14,16 @@ const Prompts = ({ handleShowPrompts }) => {
         <button
           type="button"
           className="backButton"
-          onClick={() => handleShowPrompts(false)}
+          onClick={handleShowPrompts}
         >
           Back
         </button>
         <button
           className="faBack"
           aria-label="go back"
-          onClick={() => handleShowPrompts(false)}
+          onClick={handleShowPrompts}
         >
-          <i className="far fa-times-circle"></i>
+          <i className="far fa-times-circle "></i>
         </button>
       </div>
     </section>
