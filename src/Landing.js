@@ -5,7 +5,7 @@ import React from "react";
 import Form from "./Form";
 
 // Landing Component ----- +
-const Landing = ({ displayMessage, handleShowPrompts, handleShowMsgs }) => {
+const Landing = ({ createMessage, handleShowMsgs, handleShowPrompts }) => {
   return (
     <header>
       <div className="pageWrapper">
@@ -28,7 +28,7 @@ const Landing = ({ displayMessage, handleShowPrompts, handleShowMsgs }) => {
         </div>
 
         <Form
-          displayMessage={displayMessage}
+          createMessage={createMessage}
           handleShowPrompts={handleShowPrompts}
           handleShowMsgs={handleShowMsgs}
         />

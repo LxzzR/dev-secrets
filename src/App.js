@@ -8,7 +8,7 @@ import Prompts from "./Prompts";
 import Message from "./Message";
 
 // Module variables + Functions ----- +
-const msgColors = ["white", "yellow", "green", "blue", "purple"];
+const msgBorderColors = ["white", "yellow", "green", "blue", "purple"];
 
 const msgFonts = [
   "annie",
@@ -50,7 +50,7 @@ class App extends Component {
       for (let key in data) {
         newMessages.push({
           message: data[key],
-          color: getRandomClassName(msgColors),
+          color: getRandomClassName(msgBorderColors),
           font: getRandomClassName(msgFonts),
         });
       }
@@ -62,15 +62,15 @@ class App extends Component {
   }
 
   // Handles form onSubmit event listener and updates state + firebase with new message and akes text area input value as an argument
-  displayMessage = (inputValue) => {
+  createMessage = (inputValue) => {
     const updatedMessages = [...this.state.messages];
-    const msgColor = getRandomClassName(msgColors);
+    const msgColor = getRandomClassName(msgBorderColors);
     const msgFont = getRandomClassName(msgFonts);
 
     // Pushes new message, color, and font to the copied array
     updatedMessages.push({
       message: inputValue,
-      color: msgColor,
+      borderColor: msgColor,
       font: msgFont,
     });
 
@@ -84,6 +84,7 @@ class App extends Component {
     dbRef.push(inputValue);
   };
 
+  // Changes state depending on which elements should be displayed to the user
   setDisplay = (elementToDisplay) => {
     this.setState({
       display: elementToDisplay,
@@ -98,7 +99,7 @@ class App extends Component {
         {(this.state.display === "landing" ||
           this.state.display === "prompts") && (
           <Landing
-            displayMessage={this.displayMessage}
+            createMessage={this.createMessage}
             handleShowPrompts={() => this.setDisplay("prompts")}
             handleShowMsgs={() => this.setDisplay("messages")}
           />

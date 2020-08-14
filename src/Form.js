@@ -17,7 +17,7 @@ class Form extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.displayMessage(this.state.inputValue);
+    this.props.createMessage(this.state.inputValue);
 
     this.setState({
       inputValue: "",
