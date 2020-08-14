@@ -1,3 +1,4 @@
+// === PROMPTS ===
 .prompts {
   background: $blackTransparent;
   align-items: center;
@@ -12,41 +13,22 @@
     background: $black;
     border: 4px solid $secondary;
     border-radius: 20px;
-    color: $white;
     max-width: 700px;
     padding: 30px;
     position: absolute;
     width: 80%;
-    h2 {
-      color: $primary;
-    }
-    button {
-      &:hover,
-      &:focus {
-        cursor: pointer;
-        transform: scale(1.02);
-      }
-      &:focus-within {
-        outline: 2px solid $secondary;
-        outline-offset: 2px;
-      }
-    }
-    .backButton {
-      border-radius: 5px;
-      padding: 10px 20px;
-      background: $primary;
-    }
-
-    .faBack {
-      background: transparent;
-      border: none;
-      color: $white;
-      position: absolute;
-      top: 5px;
-      right: 10px;
-    }
-    li {
-      margin: 10px 0;
-    }
+  }
+  .backButton {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: $primary;
+  }
+  .faBack {
+    background: transparent;
+    border: none;
+    color: $white;
+    position: absolute;
+    top: 5px;
+    right: 10px;
   }
 }

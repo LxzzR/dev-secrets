@@ -34,6 +34,7 @@ class Form extends Component {
           id="message"
           placeholder="Your message here..."
           minLength="5"
+          maxLength="300"
           onChange={this.handleInput}
           value={this.state.inputValue}
           required
