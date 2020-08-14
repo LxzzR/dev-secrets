@@ -36,9 +36,7 @@ class App extends Component {
     super();
     this.state = {
       messages: [{}],
-      isLandingVisible: true,
-      isMsgVisible: false,
-      isPromptsVisible: false,
+      display: "landing",
     };
   }
 
@@ -77,11 +75,8 @@ class App extends Component {
     });
 
     // Updates state with the copied state array + our new message value
-    // Sets message visible to true
     this.setState({
-      messages: updatedMessages,
-      isHeaderVisible: false,
-      isMsgVisible: true,
+      display: "messages",
     });
 
     // pushes new message to firebase
@@ -89,18 +84,9 @@ class App extends Component {
     dbRef.push(inputValue);
   };
 
-  // Handles visibility of the prompts component
-  handleShowPrompts = (boolean) => {
+  setDisplay = (elementToDisplay) => {
     this.setState({
-      isPromptsVisible: boolean,
-    });
-  };
-
-  // Handles visibility of landing and message sections
-  handleShowMsgs = (boolean) => {
-    this.setState({
-      isLandingVisible: !boolean,
-      isMsgVisible: boolean,
+      display: elementToDisplay,
     });
   };
 
@@ -109,22 +95,23 @@ class App extends Component {
     return (
       <div>
         {/* Display Landing Conditionally */}
-        {this.state.isLandingVisible && (
+        {(this.state.display === "landing" ||
+          this.state.display === "prompts") && (
           <Landing
             displayMessage={this.displayMessage}
-            handleShowPrompts={() => this.handleShowPrompts(true)}
-            handleShowMsgs={this.handleShowMsgs}
+            handleShowPrompts={() => this.setDisplay("prompts")}
+            handleShowMsgs={() => this.setDisplay("messages")}
           />
         )}
 
         {/* Display messages conditionally */}
-        {this.state.isMsgVisible && (
+        {this.state.display === "messages" && (
           <main>
             <section className="messages pageWrapper">
               <div className="messageHeading">
                 <h2>Dev Secrets...</h2>
                 <div className="btnWrapper">
-                  <button onClick={() => this.handleShowMsgs(false)}>
+                  <button onClick={() => this.setDisplay("landing")}>
                     Post Again
                   </button>
                 </div>
@@ -148,8 +135,8 @@ class App extends Component {
         )}
 
         {/* Display prompts modal conditionally */}
-        {this.state.isPromptsVisible && (
-          <Prompts handleShowPrompts={() => this.handleShowPrompts(false)} />
+        {this.state.display === "prompts" && (
+          <Prompts handleShowPrompts={() => this.setDisplay("landing")} />
         )}
       </div>
     );
