@@ -1,5 +1,7 @@
 ## Dev Secrets
 
-This simple app helps combat imposter syndrome by allowing users to leave anonymous messages about dev feelings.
+This app, inspired by Post Secret, is an anonymous message board for developers and helps combat imposter syndrome by allowing users to leave anonymous messages about their dev feelings. It's my first ever solo React project and was built with user experience, simplicity and clean code in mind. 
 
-https://lizzsoup.github.io/lizzRennieProject5/
+## Check it out here:
+
+https://lizzsoup.github.io/dev-secrets/
