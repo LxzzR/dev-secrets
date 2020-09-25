@@ -20,23 +20,11 @@
   }
   button {
     background: transparent;
-    // border: 1px solid $white;
     border-radius: 5px;
-    // border-radius: 10px;
     color: $primary;
     padding: 5px 10px;
     font-size: 2rem;
     font-weight: 400;
-    &:hover,
-    &:focus {
-      border: 2px solid $white;
-      cursor: pointer;
-      transform: scale(1.02);
-    }
-    &:focus-within {
-      outline: 2px solid $secondary;
-      outline-offset: 2px;
-    }
   }
 }
 
@@ -62,5 +50,20 @@
   }
   &.yellow {
     border-color: $secondary;
+  }
+  &.pink {
+    border-color: hotpink;
+  }
+  .buttonWrapper {
+    float: right;
+    button {
+      background: transparent;
+      margin: 2px;
+      padding: 3px;
+      .fa-heart {
+        background: $black;
+        color: pink;
+      }
+    }
   }
 }

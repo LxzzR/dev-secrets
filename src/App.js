@@ -8,19 +8,17 @@ import Prompts from "./Prompts";
 import Message from "./Message";
 
 // Module variables + Functions ----- +
-const msgBorderColors = ["white", "yellow", "green", "blue", "purple"];
+const msgBorderColors = ["white", "yellow", "green", "blue", "purple", "pink"];
 
 const msgFonts = [
   "annie",
   "reenie",
-  "amatic",
   "sueEllen",
   "swanky",
   "arial",
   "nanum",
   "neucha",
   "architects",
-  "amatic",
 ];
 
 // Takes an array and returns a random index value of that array

@@ -17,10 +17,6 @@
     font-size: 50%;
   }
 
-  .headingWrapper {
-    width: 60%;
-  }
-
   h1 {
     padding: 30px 0;
   }
@@ -117,17 +113,17 @@
     textarea {
       margin: 0 auto;
       padding: 20px;
-      width: 55%;
+      width: 60%;
     }
     .btnWrapper {
       display: flex;
       flex-wrap: wrap;
       left: 0;
-      bottom: 7px;
+      bottom: 0;
       position: absolute;
       width: 50%;
       button {
-        margin: 5px 0;
+        margin: 2px 0;
         width: 60%;
       }
     }

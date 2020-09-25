@@ -11,18 +11,19 @@ const Landing = ({ createMessage, handleShowMsgs, handleShowPrompts }) => {
       <div className="pageWrapper">
         <div className="headingWrapper">
           <h1>
-            <span>&lt;</span>Dev Secrets<span>&frasl;&gt;</span>
+            <span>&lt;</span>Dev Secrets...<span>&gt;</span>
           </h1>
         </div>
         <div className="intro">
           <p>
-            The antidote to imposter syndrome is talking about it and knowing
-            that you're not alone. Dev Secrets is an anonymous message board for
-            devs inspired by "Post Secret".{" "}
+            It's often said that the antidote to imposter syndrome is talking
+            about it with others and realizing you're not alone. Dev Secrets is
+            an anonymous message board for devs, inspired by "Post Secret", to
+            help combat imposter syndrome.
           </p>
           <p>
             Leave an anonymous message to inspire other devs or unload some
-            stress, then take a peak into the inner world of other coders who
+            stress, then take a peek into the inner world of other coders who
             are just like you.
           </p>
         </div>

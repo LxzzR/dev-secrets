@@ -28,11 +28,11 @@ class Form extends Component {
   render() {
     return (
       <form className="messageForm" action="/" onSubmit={this.handleSubmit}>
-        <label htmlFor="message">Leave your message here:</label>
+        <label htmlFor="message">Write a secret in the text box</label>
         <textarea
           type="text"
           id="message"
-          placeholder="Your message here..."
+          placeholder="Write your dev secret or leave some motivation here..."
           minLength="5"
           maxLength="300"
           onChange={this.handleInput}
@@ -40,18 +40,18 @@ class Form extends Component {
           required
         />
         <div className="btnWrapper">
-          <button type="button" onClick={this.props.handleShowPrompts}>
-            Need a prompt?
-          </button>
-          <button type="submit" className="postMsg">
-            Post Message
-          </button>
           <button
             type="button"
             className="showSecrets"
             onClick={this.props.handleShowMsgs}
           >
-            Just take me to the secrets..
+            Skip to Secrets
+          </button>
+          <button type="button" onClick={this.props.handleShowPrompts}>
+            Need a prompt?
+          </button>
+          <button type="submit" className="postMsg">
+            Post Message
           </button>
         </div>
       </form>

@@ -7,15 +7,15 @@
     background: transparent;
     border: 2px solid $primary;
     border-radius: 10px;
-    color: $accent;
+    color: pink;
     height: 140px;
     margin-bottom: 10px;
     padding: 10px;
     width: 100%;
     &:focus,
     &:focus-within {
-      outline: 2px solid $secondary;
-      outline-offset: 3px;
+      outline: none;
+      border: 4px solid $primary;
     }
   }
 
@@ -29,17 +29,14 @@
       border-radius: 10px;
       color: $black;
       transition: background 150ms;
-      margin: 0;
+      margin: 5px 0;
       width: 48%;
       &.postMsg {
         background: $primary;
       }
-    }
-    .showSecrets {
-      background: transparent;
-      color: $white;
-      margin: 8px 0;
-      width: 57%;
+      &.showSecrets {
+        background: $white;
+      }
     }
   }
 }

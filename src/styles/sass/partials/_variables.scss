@@ -3,7 +3,7 @@
 // Colours ----- +
 $black: rgb(21, 21, 26);
 $blackTransparent: rgba(21, 21, 26, 0.8);
-$white: rgb(188, 170, 164);
+$white: lighten(rgb(188, 170, 164), 15);
 
 $primary: rgb(128, 203, 196);
 $secondary: rgb(255, 171, 0);
